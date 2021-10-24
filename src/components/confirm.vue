@@ -1,5 +1,9 @@
 <template>
-   confirm
+<div>
+
+confirm
+</div>
+   
 </template>
 
 <script>
