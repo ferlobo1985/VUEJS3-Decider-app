@@ -3,7 +3,7 @@
    <h3>Your question is:</h3>
    <div class="viewer"> {{ question }} </div>
 
-   <div>
+   <div class="animate__animated animate__bounceIn animate__delay-1s">
       <hr/>
       <button class="btn" @click="goNext">
          Decide it
@@ -13,7 +13,6 @@
       </button>
 
    </div>
-
 </div>
    
 </template>

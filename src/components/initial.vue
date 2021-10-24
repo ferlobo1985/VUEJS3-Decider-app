@@ -12,7 +12,7 @@
 
             <button
                 v-if="question"
-                class="btn"
+                class="btn animate__animated animate__fadeIn"
                 @click="handleNext"
             >
                 Next
