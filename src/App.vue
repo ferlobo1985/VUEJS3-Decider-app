@@ -1,5 +1,11 @@
 <template>
-sss
+  <div class="container">
+
+    <component
+      :is="screens[position]"
+    />
+
+  </div>
 
 </template>
 
@@ -13,6 +19,12 @@ sss
      appInitial,
      appConfirm,
      appResults
+   },
+   data(){
+     return{
+        screens:['appInitial','appConfirm','appResults'],
+        position:0
+     }
    }
  }
 </script>
