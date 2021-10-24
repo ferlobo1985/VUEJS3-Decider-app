@@ -18,10 +18,10 @@
                 Next
             </button>
 
-            <div v-if="error" class="error">
+            <!-- <div v-if="error" class="error">
                 You question is to short
             </div>
-
+ -->
 
         </div>
 
@@ -33,7 +33,7 @@ export default {
     data(){
         return {
             question:'',
-            error:false
+           // error:false
         }
     },
     methods:{
@@ -41,7 +41,17 @@ export default {
             e.preventDefault();
 
             if(this.question.length <= 5){
-                this.error = true;
+              //  this.error = true;
+                this.$emit('handleToast',{
+                    type:'error',
+                    message:`You question is to short`
+                })
+            
+            } else if(this.question.length >= 50){
+                this.$emit('handleToast',{
+                    type:'error',
+                    message:`You question is to long`
+                })
             } else {
                 this.error = false;
                 this.$emit('goto',1);
